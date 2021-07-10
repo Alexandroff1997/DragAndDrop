@@ -23,17 +23,18 @@ function dragend(e) {
 }
 
 function dragover(e) {
-	console.log('drag over')
+	e.preventDefault()
 }
 
 function dragenter(e) {
-	console.log('drag enter')
+	e.target.classList.add('hovered')
 }
 
 function dragleave(e) {
-	console.log('drag leave')
+	e.target.classList.remove('hovered')
 }
 
 function dragdrop(e) {
-	console.log('drag drop')
+	e.target.append(item)
+	e.target.classList.remove('hovered')
 }
